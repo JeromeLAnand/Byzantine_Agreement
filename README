@@ -1,0 +1,32 @@
+                                                                                                                                                                   
+Instructions                                                                                                                                                        
+------------                                                                                                                                                        
+1. Building the source code :                                                                                                                                       
+----------------------------                                                                                                                                        
+        1. uncompress the zip file to a destination location                                                                                                        
+        2. make  
+        3. Now you will have byz_demo_app in your destination folder 
+ 
+2. Running the package :
+----------------------- 
+        1. Once you have built the above source code, execute the below steps 
+                terminal :: $chmod 777 byz_app_demo                                                                                                                
+                terminal :: $./byz_app_demo                                                                                                                        
+        2. You will be asked for the certain inputs. Do enter the same as per your needs
+        3. Once you have entered all the inputs, allow the code to construct the sites for you for a second
+        4. You will see a sequence of prints capturing the messages sent from one site to other
+	5. You will also finally see whether the consensus is reached in each of the lieutenant nodes                                             
+        6. If you want additional logs, do enable DEBUG macro in the code and compile the code.
+                 
+3. Note          
+---------           
+        1. The code assumes, the general to take the first node, So the number of lieutenants will be number entered + one
+	2. The code is split into two
+		a. Sends messages to all other nodes and other sites wait for all the nodes to recieve its messages
+		b. Once all the sites finishes sending its messages, it starts to process its message queue for the recieved messages
+	3. Press ENTER to find out whether CONSENSUS can be reached for the given input or not at the end
+
+Eg: For N=3 and M=1 CONSENSUS cannot be reached and status of each Lieutenant is printed in the code. One Lieutenant can arrive
+at Consensus but on the whole, its not possible since majority wont have consensus reached.
+
+For N=6, M=1, CONSENSUS is possible
